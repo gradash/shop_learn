@@ -17,4 +17,14 @@ $function = $actionName . 'Action';
 echo 'Full function name = ' . $function . "</br>";
 
 
-$function();
+
+
+//path to controllers
+define('PathPrefix', '../controllers/');
+define('PathPostfix', 'Controller.php');
+
+function loadPage($controllerName, $actionName = 'index'){
+	include_once PathPrefix . $controllerName . PathPostfix;
+	$function = $actionName . 'Action';
+    $function();
+}
