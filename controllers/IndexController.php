@@ -12,5 +12,7 @@ function testAction(){
 function indexAction($smarty)
 {
     $smarty->assign('pageTitle', 'Main page');
+    loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');
+    loadTemplate($smarty, 'footer');
 }

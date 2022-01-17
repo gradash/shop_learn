@@ -1,8 +1,9 @@
 <?php
 //auto commentary test (/**)
 /**
+ * @param $smarty
  * @param $controllerName
- * @param $actionName
+ * @param string $actionName
  * @return void
  */
 
