@@ -15,7 +15,7 @@ const TemplatePostfix = '.tpl';
 
 
 //templates path in webspace
-define('TemplateWebPath', "..www/templates/$template/");
+define('TemplateWebPath', "../www/templates/$template/");
 
 
 //Smarty init (full path to Smarty.class.php)
