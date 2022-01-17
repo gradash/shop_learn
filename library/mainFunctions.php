@@ -1,11 +1,29 @@
 <?php
+//auto commentary test (/**)
+/**
+ * @param $controllerName
+ * @param $actionName
+ * @return void
+ */
 
-
-
-function loadPage($controllerName, $actionName = 'index'){
+function loadPage($smarty, $controllerName, $actionName = 'index'){
 	//using constants from config.php
 	require_once PathPrefix . $controllerName . PathPostfix;
 
 	$function = $actionName . 'Action';
-    $function();
+    $function($smarty);
+}
+
+function loadTemplate($smarty, $templateName){
+
+    $templateName .= TemplatePostfix;
+    $smarty->display($templateName);
+}
+
+function d($value = null, $die = 1){
+    echo 'Debug: <br /><pre>';
+    print_r($value);
+    echo '</pre>';
+
+    if($die) die;
 }

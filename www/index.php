@@ -5,8 +5,14 @@ require_once '../library/mainFunctions.php';
 
 // which controller to work
 $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'Index';
-// which function to use
+
+
+
+
+// which function from controller to use
 $actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
 
+//all working, but phpstorm tells about undefined variable
 
-loadPage($controllerName, $actionName);
+loadPage($smarty, $controllerName, $actionName);
+
