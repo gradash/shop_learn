@@ -1,5 +1,5 @@
 <?php
 
-//path to controllers
+//constants for working with controllers
 define('PathPrefix', '../controllers/');
 define('PathPostfix', 'Controller.php');
