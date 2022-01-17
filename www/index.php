@@ -10,7 +10,7 @@ $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'I
 // which function from controller to use
 $actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
 
-//all working, but phpstorm tells about undefined variable
+
 
 loadPage($smarty, $controllerName, $actionName);
 
