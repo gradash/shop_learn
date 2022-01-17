@@ -9,9 +9,8 @@ function testAction(){
 
 //main page creation with Smarty
 
-function indexAction($smarty){
-
+function indexAction($smarty)
+{
     $smarty->assign('pageTitle', 'Main page');
-
     loadTemplate($smarty, 'index');
 }

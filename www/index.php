@@ -7,8 +7,6 @@ require_once '../library/mainFunctions.php';
 $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'Index';
 
 
-
-
 // which function from controller to use
 $actionName = isset($_GET['action']) ? $_GET['action'] : 'index';
 

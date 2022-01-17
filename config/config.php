@@ -10,16 +10,16 @@ $template = 'default';
 
 
 //template files path
-define ('TemplatePrefix', "../views/$template/"); //using define because of expression
+define('TemplatePrefix', "../views/$template/"); //using define because of expression
 const TemplatePostfix = '.tpl';
 
 
 //templates path in webspace
-define ('TemplateWebPath', "/templates/$template");
+define('TemplateWebPath', "/templates/$template/");
 
 
 //Smarty init (full path to Smarty.class.php)
-require_once ('../library/Smarty/libs/Smarty.class.php');
+require_once('../library/Smarty/libs/Smarty.class.php');
 $smarty = new Smarty();
 $smarty->setTemplateDir(TemplatePrefix);
 $smarty->setCompileDir('../tmp/smarty/templates_c');

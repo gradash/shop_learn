@@ -6,24 +6,27 @@
  * @return void
  */
 
-function loadPage($smarty, $controllerName, $actionName = 'index'){
-	//using constants from config.php
-	require_once PathPrefix . $controllerName . PathPostfix;
+function loadPage($smarty, $controllerName, $actionName = 'index')
+{
+    //using constants from config.php
+    require_once PathPrefix . $controllerName . PathPostfix;
 
-	$function = $actionName . 'Action';
+    $function = $actionName . 'Action';
     $function($smarty);
 }
 
-function loadTemplate($smarty, $templateName){
+function loadTemplate($smarty, $templateName)
+{
 
     $templateName .= TemplatePostfix;
     $smarty->display($templateName);
 }
 
-function d($value = null, $die = 1){
+function d($value = null, $die = 1)
+{
     echo 'Debug: <br /><pre>';
     print_r($value);
     echo '</pre>';
 
-    if($die) die;
+    if ($die) die;
 }
