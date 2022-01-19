@@ -1,17 +1,18 @@
 <?php
 
-/*main page controller
-function testAction(){
-	echo 'IndexController.php -> testAction';
-}
-*/
+//main page controller
+
+require_once '../models/CategoriesModel.php';
 
 
 //main page creation with Smarty
 
-function indexAction($smarty)
-{
+function indexAction($smarty){
+
+    $rsCategories = getAllMainCatsWithChildren();
+
     $smarty->assign('pageTitle', 'Main page');
+
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');
     loadTemplate($smarty, 'footer');

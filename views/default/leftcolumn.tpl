@@ -1,4 +1,4 @@
-<div id="leftColumn">
+ <div id="leftColumn">
 
     <div id="leftMenu">
         <div class="menuCaption">Menu:</div>

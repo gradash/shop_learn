@@ -2,6 +2,7 @@
 
 require_once '../config/config.php'; //constants and configs
 require_once '../library/mainFunctions.php';
+require_once '../config/db.php';
 
 // which controller to work
 $controllerName = isset($_GET['controller']) ? ucfirst($_GET['controller']) : 'Index';
