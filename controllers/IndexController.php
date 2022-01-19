@@ -11,6 +11,7 @@ function indexAction($smarty){
 
     $rsCategories = getAllMainCatsWithChildren();
 
+
     $smarty->assign('pageTitle', 'Main page');
 
     loadTemplate($smarty, 'header');
