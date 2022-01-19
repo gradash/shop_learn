@@ -1,40 +1,27 @@
 <?php
 
-/* db connection initialization
-$dblocation="localhost";
-$dbname = "myshop";
-$dbuser = "root";
-$dbpasswd = "";
-
-//db connection
-$db = mysqli_connect($dblocation,$dbuser,$dbpasswd);
+// db connection initialization
 
 
-if(!$db){
-    echo "MySQL error";
-    exit();
-}
+function getDBConnection()
+{
+    static $link = null;
+    static $dblocation = "localhost";
+    static $dbname = "myshop";
+    static $dbuser = "root";
+    static $dbpasswd = "";
 
-if (!mysqli_select_db($db, $dbname)){
-    echo "MySQL Error";
-    exit();
-}
-*/
-
-// I'll try to learn some PDO from official documentation...
-$dbuser = "root";
-$dbpasswd = "";
-
-try {
-    $db = new PDO('mysql:host=localhost;dbname=myshop;charset=utf8', $dbuser, $dbpasswd);
-    /* USED FOR TESTING
-     * foreach ($db->query('SELECT * from categories') as $row) {
-       print_r($row);
+    if (!$link) {
+        $link = mysqli_connect($dblocation, $dbuser, $dbpasswd);
+        if (!mysqli_select_db($link, $dbname)) {
+            echo "MySQL Error";
+            exit();
+        }
+        if (!$link) {
+            echo "MySQL error";
+            exit();
+        }
     }
-    $db = null;
-    */
 
-} catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
+    return $link;
 }
