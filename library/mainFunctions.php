@@ -24,35 +24,7 @@ function loadTemplate($smarty, $templateName)
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//for testing purposes
+//for debug purposes
 function d($value = null, $die = 1)
 {
     echo 'Debug: <br /><pre>';

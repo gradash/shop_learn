@@ -13,6 +13,7 @@ function indexAction($smarty){
 
 
     $smarty->assign('pageTitle', 'Main page');
+    $smarty->assign('rsCategories', $rsCategories);
 
     loadTemplate($smarty, 'header');
     loadTemplate($smarty, 'index');

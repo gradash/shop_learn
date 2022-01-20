@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.0.3, created on 2022-01-17 15:22:34
+/* Smarty version 4.0.3, created on 2022-01-20 11:46:23
   from 'C:\xampp\htdocs\shop_learn\views\default\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.0.3',
-  'unifunc' => 'content_61e57baa2e4737_21264361',
+  'unifunc' => 'content_61e93d7f595427_81208624',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:leftcolumn.tpl' => 1,
   ),
 ),false)) {
-function content_61e57baa2e4737_21264361 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61e93d7f595427_81208624 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html lang="en">
 <head>
     <title><?php echo $_smarty_tpl->tpl_vars['pageTitle']->value;?>
