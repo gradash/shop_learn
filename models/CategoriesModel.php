@@ -1,21 +1,6 @@
 <?php
 
 
-// Model for categories DataBase
-
-
-/**
- * @param $catId
- * @return array|false
- */
-function getChildrenForCat($catId){
-    $sqlquery = "SELECT * FROM categories WHERE parent_id='{$catId}'";
-    $rs = mysqli_query(getDBConnection(), $sqlquery);
-    return createSmartyRsArray($rs);
-
-
-}
-
 /**
  * get main categories with child connections
  * @return array
@@ -23,7 +8,7 @@ function getChildrenForCat($catId){
 
 function getAllMainCatsWithChildren()
 {
-    $sqlquery = 'SELECT * FROM categories WHERE parent_id=0';
+    $sqlquery = "SELECT * FROM categories WHERE parent_id=0";
     $rs = mysqli_query(getDBConnection(), $sqlquery);  // rs for records
 
     $smartyRs = array();
@@ -35,5 +20,20 @@ function getAllMainCatsWithChildren()
         }
         $smartyRs[] = $row;
     }
+    d($smartyRs);
     return $smartyRs;
+}
+
+
+/**
+ * @param $catId
+ * @return array|false
+ */
+function getChildrenForCat($catId)
+{
+    $sqlquery = "SELECT * FROM categories WHERE parent_id='$catId'";
+    $rs = mysqli_query(getDBConnection(), $sqlquery);
+    return createSmartyRsArray($rs);
+
+
 }
