@@ -23,6 +23,19 @@ function loadTemplate($smarty, $templateName)
     $smarty->display($templateName);
 }
 
+/**
+ * @param $rs
+ * @return array|false
+ */
+function createSmartyRsArray($rs){
+    if (!$rs) return false;
+    $smartyRs = array();
+    while ($row = mysqli_fetch_assoc($rs)){
+        $smartyRs[]=$row;
+    }
+    return $smartyRs;
+}
+
 
 //for debug purposes
 function d($value = null, $die = 1)
